@@ -1,1 +1,121 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: 'NoirProBold';
+    src: url('/fonts/noirPro/NoirProBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NoirProHeavy';
+    src: url('/fonts/noirPro/NoirProHeavy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NoirProLight';
+    src: url('/fonts/noirPro/NoirProLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NoirProLightItalic';
+    src: url('/fonts/noirPro/NoirProLightItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NoirProMedium';
+    src: url('/fonts/noirPro/NoirProMedium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NoirProRegular';
+    src: url('/fonts/noirPro/NoirProRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NoirProSemiBold';
+    src: url('/fonts/noirPro/NoirProSemiBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'albulaBold';
+    src: url('/fonts/albula/albulaBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'albulaExtraBold';
+    src: url('/fonts/albula/albulaExtraBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'albulaExtraLight';
+    src: url('/fonts/albula/albulaExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'albulaHeavy';
+    src: url('/fonts/albula/albulaHeavy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'albulaLight';
+    src: url('/fonts/albula/albulaLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'albulaMedium';
+    src: url('/fonts/albula/albulaMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'albulaRegular';
+    src: url('/fonts/albula/albulaRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'albulaSemiBold';
+    src: url('/fonts/albula/albulaSemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'albulaThin';
+    src: url('/fonts/albula/albulaThin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@theme {
+    --font-NoirProBold: noirProBold;
+    --font-NoirProHeavy: noirProHeavy;
+    --font-NoirProItalic: noirProItalic;
+    --font-NoirProLight: noirProLight;
+    --font-NoirProMedium: noirProMedium;
+    --font-NoirProRegular: noirProRegular;
+    --font-NoirProSemiBold: noirProSemiBold;
+
+    --font-albulaBold: albulaBold;
+    --font-albulaExtraBold: albulaExtraBold;
+    --font-albulaExtraLight: albulaExtraLight;
+    --font-albulaHeavy: albulaHeavy;
+    --font-albulaLight: albulaLight;
+    --font-albulaMedium: albulaMedium;
+    --font-albulaRegular: albulaRegular;
+    --font-albulaSemiBold: albulaSemiBold;
+    --font-albulaThin: albulaThin;
+
+    --breakpoint-xs: 30rem;
+}

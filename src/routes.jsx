@@ -9,9 +9,9 @@ import Footer from "./components/navigation/footer/footer";
 function RoutesApp() {
 	return (
 		<Router>
-			<Header />
+			{/* <Header /> */}
 			<MainRoutes />
-			<Footer />
+			{/* <Footer /> */}
 		</Router>
 	);
 }
