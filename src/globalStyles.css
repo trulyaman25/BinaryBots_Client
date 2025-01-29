@@ -91,6 +91,24 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'FreeZoneBold';
+    src: url('/fonts/freeZone/FreeZoneBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FreeZoneMedium';
+    src: url('/fonts/freeZone/FreeZoneMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FreeZoneRegular';
+    src: url('/fonts/freeZone/FreeZoneRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @theme {
     --font-NoirProBold: noirProBold;
@@ -110,5 +128,22 @@
     --font-albulaSemiBold: albulaSemiBold;
     --font-albulaThin: albulaThin;
 
+    --font-FreeZoneBold: FreeZoneBold;
+    --font-FreeZoneMedium: FreeZoneMedium;
+    --font-FreeZoneRegular: FreeZoneRegular;
+
     --breakpoint-xs: 30rem;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-ticker {
+    animation: ticker 30s linear infinite;
 }
