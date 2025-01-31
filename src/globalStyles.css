@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Add this at the top after the import */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
 @font-face {
     font-family: 'NoirProBold';
     src: url('/fonts/noirPro/NoirProBold.otf') format('opentype');
