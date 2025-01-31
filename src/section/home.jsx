@@ -1,7 +1,9 @@
+import { Link } from "lucide-react";
+
 function Home() {
     return (
         <>
-            <h1>Home</h1>
+            <Link to='/member/aman'>Aman</Link>
         </>
     )
 }
