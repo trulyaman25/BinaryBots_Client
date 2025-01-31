@@ -33,7 +33,7 @@ function MemberPage() {
 	return (
 		<>
 			<div className='bg-[#eeedec]'>
-				<div className="w-full h-[90vh] sm:h-[102vh] rounded-b-[70px] lg:rounded-b-[120px] border-b-1 bg-[#fcfcfc] border-b-slate-300">
+				<div className="w-full h-[102vh] rounded-b-[70px] lg:rounded-b-[120px] border-b-1 bg-[#fcfcfc] border-b-slate-300">
 					<div className='w-full h-[75vh] rounded-b-[70px] lg:rounded-b-[120px] border-b-1 border-b-slate-300 bg-[#eeedec]'>
 						<div id="nav" className='w-full h-[130px] flex flex-row justify-between items-center px-4 sm:px-10 md:px-16 lg:px-24'>
 							<div className='flex flex-row justify-between items-center gap-1 xs:gap-3'>	 
