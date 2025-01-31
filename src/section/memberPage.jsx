@@ -7,8 +7,7 @@ import TechStackTicker from '../components/TechStackTicker';
 function MemberPage() {
 	const techStack = [
 		"Sql",
-		"Web Development",
-		"Full-Stack Development",
+		"Full-Stack Web Developer",
 		"Blockchain",
 		"Smart Contracts",
 		"Solidity",
@@ -16,11 +15,7 @@ function MemberPage() {
 		"Java",
 		"JavaScript",
 		"ReactJS",
-		"Html",
-		"Css",
-		"Git",
-		"Machine Learning",
-		"Ai",
+		"Github",
 		"Ipfs",
 		"Node.js",
 		"Express.js",
@@ -28,7 +23,6 @@ function MemberPage() {
 		"Rest Api's",
 		"Docker",
 		"Firebase",
-		"Next.js",
 	  ];
 	  
 	return (
@@ -73,8 +67,9 @@ function MemberPage() {
 						<div id='introSection' className='flex-grow flex flex-col justify-center items-center gap-3 sm:gap-6 px-4 sm:px-10'>
 							<img src={amanPicture} alt="Aman's Picture" className='w-[200px] h-[200px] border-5 border-white rounded-full'/>
 							<div className='flex flex-col justify-center items-center gap-1 sm:gap-3'>
-								<h1 className='text-3xl sm:text-5xl capitalize font-FreeZoneBold tracking-wider mt-3'>aman  kumar</h1>
-								<p className='text-2xl sm:text-4xl text-gray-500 font-FreeZoneRegular max-w-[600px] text-center'>Building digital experiences with Blockchain, AI, and Full-Stack Development.</p>
+							<h1 className="text-3xl sm:text-5xl capitalize font-FreeZoneBold tracking-wider mt-3 bg-gradient-to-r from-[#1d1d1d] via-[#383837] to-[#5E5D5D] bg-clip-text text-transparent">aman kumar</h1>
+
+								<p className='text-2xl sm:text-4xl font-FreeZoneRegular max-w-[600px] text-center bg-gradient-to-r from-[#1d1d1d] via-[#383837] to-[#5E5D5D] bg-clip-text text-transparent'>Building digital experiences with Blockchain, AI, and Full-Stack Development.</p>
 								
 								<div className='flex flex-col sm:flex-row justify-between items-center gap-3 sm:border-1 border-gray-500 p-1 rounded-full sm:gap-7 mt-4 transition-none'>
 									<button className='bg-[#131313] text-white font-NoirProRegular text-xs px-10 py-4 rounded-full hover:cursor-pointer hover:bg-[#302f2f] transition-all duration-300 ease-in-out'>
@@ -84,21 +79,6 @@ function MemberPage() {
 										home
 									</Link>
 								</div>
-
-								{/* <div className='flex flex-row justify-between items-center gap-10 mt-10'>
-									<button className='bg-[#131313] text-white font-NoirProRegular text-xs px-10 py-4 rounded-full hover:cursor-pointer hover:bg-[#302f2f] hover:scale-105 transition-all duration-300 ease-in-out'>
-										leetcode
-									</button>
-									<button className='bg-[#131313] text-white font-NoirProRegular text-xs px-10 py-4 rounded-full hover:cursor-pointer hover:bg-[#302f2f] hover:scale-105 transition-all duration-300 ease-in-out'>
-										codechef
-									</button>
-									<button className='bg-[#131313] text-white font-NoirProRegular text-xs px-10 py-4 rounded-full hover:cursor-pointer hover:bg-[#302f2f] hover:scale-105 transition-all duration-300 ease-in-out'>
-										codolio
-									</button>
-									<button className='bg-[#131313] text-white font-NoirProRegular text-xs px-10 py-4 rounded-full hover:cursor-pointer hover:bg-[#302f2f] hover:scale-105 transition-all duration-300 ease-in-out'>
-										devfolio
-									</button>
-								</div> */}
 							</div>
 						</div>
 					</div>
