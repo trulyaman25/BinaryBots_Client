@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';  // Add useState import
 import { Link } from 'react-router-dom';
-import { User, Mail, Linkedin, Instagram, Github, ArrowRight, MonitorSmartphone, PenTool, Code, HandshakeIcon } from 'lucide-react';
+import { User, Mail, Linkedin, Instagram, Github, ArrowRight, MonitorSmartphone, PenTool, Code, HandshakeIcon, Heart } from 'lucide-react';
 import amanPicture from '/teamMembers/amanImg.jpg';
 import TechStackTicker from '../components/TechStackTicker';
 
 function MemberPage() {
+    const [likedProjects, setLikedProjects] = useState(new Set());
+    
 	const techStack = [
 		"Sql",
 		"Full-Stack Web Developer",
@@ -23,7 +25,38 @@ function MemberPage() {
 		"Rest Api's",
 		"Docker",
 		"Firebase",
-	  ];
+	];
+
+	const projects = [
+		{
+		  title: "Well Wise",
+		  organization: "Binary Bots",
+		  description: "Well Wise is a healthcare platform that emphasizes mental health detection and management through AI-driven tools. it aims to tackle the challenge of diagnosing and managing depression.",
+		  likes: 0,
+		  icon: "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fdd6fb6207c72492cba2fa39d56197b71%2Fprojects%2Ff5dfd630bf984675b19a5d55f6d29e9c%2Fa444e1c0-cac9-4b6f-a7e2-ce584b5bc3cf.jpeg&w=1440&q=75",
+		  projectLink: "https://devfolio.co/projects/well-wise-50a2",
+		},
+		{
+			title: "Check Mate",
+			organization: "Binary Bots",
+			description: "CheckMate automates document verification with AI and blockchain, storing verified files on IPFS and providing tamper-proof access, fast verification, and a secure document wallet.",
+			likes: 25,
+			icon: "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fb6d5c300e40c4b46a7252ebc2e2ffa1e%2Fprojects%2Ff5dfd630bf984675b19a5d55f6d29e9c%2F6062ecbd-26a7-4d4e-b183-311e4850a832.jpeg&w=1440&q=75",
+			projectLink: "https://devfolio.co/projects/check-mate-d1ea",
+		}
+	]
+
+    const handleLike = (projectTitle) => {
+        setLikedProjects(prev => {
+            const newLiked = new Set(prev);
+            if (newLiked.has(projectTitle)) {
+                newLiked.delete(projectTitle);
+            } else {
+                newLiked.add(projectTitle);
+            }
+            return newLiked;
+        });
+    };
 	  
 	return (
 		<>
@@ -83,13 +116,50 @@ function MemberPage() {
 						</div>
 					</div>
 
-					<div id='techStackBar' className='w-full h-[100px] xs:h-[230px] flex flex-row justify-center items-center'>
+					<div id='techStackBar' className='w-full h-[120px] xs:h-[230px] flex flex-row justify-center items-center'>
                         <TechStackTicker techStack={techStack} />
                     </div>
 				</div>
 
-				<div className='w-full h-[100vh] flex flex-col justify-center items-center'>
-					
+				<div id='projects' className='w-full px-4 py-10 lg:py-24 lg:px-24 flex flex-col justify-start items-center'>
+					<div className='flex flex-col justify-evenly items-center gap-3'>
+						<h1 className='font-FreeZoneBold text-center text-4xl xs:text-[40px] sm:text-5xl bg-gradient-to-r from-[#1d1d1d] via-[#383837] to-[#5E5D5D] bg-clip-text text-transparent'>Projects by Aman Kumar</h1>
+						<h1 className='font-FreeZoneMedium text-2xl sm:text-3xl text-center bg-gradient-to-r from-[#1d1d1d] via-[#383837] to-[#5E5D5D] bg-clip-text text-transparent'>Code. Create. Conquer.</h1>
+					</div>
+
+					<span className='w-[70%] h-[1px] bg-gray-300 mt-10'></span>
+
+					<div id='devFolioCards'>
+						<div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 mt-10">
+							{projects.map((project, index) => (
+								<div key={index} className="bg-white rounded-2xl p-7 xs:p-10 max-w-[500px] border-1 border-transparent hover:border-1 hover:border-gray-400 transition-none">
+									<div className="flex justify-between items-start">
+										<div className="flex gap-4">
+											<img src={project.icon} alt={`${project.title} icon`} className="w-16 h-16 rounded-lg object-cover" />
+											<div>
+												<h3 className="text-xl sm:text-2xl font-albulaBold text-[#131313]">{project.title}</h3>
+												<p className="text-xs sm:text-md lg:text-[15px] font-albulaRegular text-[#383837]">By {project.organization}</p>
+											</div>
+
+										</div>
+										
+										<div onClick={() => handleLike(project.title)}className="flex flex-col w-[60px] h-[60px] justify-center items-center gap-2 bg-white rounded-md shadow-sm border hover:shadow-md hover:cursor-pointer border-gray-100" >
+                                            <Heart className={`w-4 h-4 ${likedProjects.has(project.title) ? 'text-red-500 fill-red-500' : 'text-gray-600'}`}/>
+                                            <span className="text-sm font-albulaHeavy text-gray-900">
+                                                {project.likes + (likedProjects.has(project.title) ? 1 : 0)}
+                                            </span>
+                                        </div>
+									</div>
+
+									<p className="text-gray-600 mt-6 mb-6 font-albulaRegular line-clamp-3 text-sm sm:text-md">{project.description}</p>
+
+									<div>
+										<a href={project.projectLink} className='px-6 sm:px-7 py-3 border-1 text-sm font-albulaRegular border-gray-100 hover:border-1 hover:border-gray-500 rounded-md hover:cursor-pointer'>Learn More...</a>
+									</div>
+								</div>
+							))}
+						</div>
+					</div>
 				</div>
 			</div>
 		</>
