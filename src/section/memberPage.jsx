@@ -103,7 +103,7 @@ function MemberPage() {
 						</div>
 					</div>
 
-					<div id='techStackBar' className='w-full h-[100px] sm:h-[230px] flex flex-row justify-center items-center'>
+					<div id='techStackBar' className='w-full h-[100px] xs:h-[230px] flex flex-row justify-center items-center'>
                         <TechStackTicker techStack={techStack} />
                     </div>
 				</div>
