@@ -4,15 +4,14 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
-		"client": "vite",
-		"server": "cd server && node index.js",
-		"dev": "concurrently \"npm run client\" \"npm run server\"",
+		"dev": "vite",
 		"build": "vite build",
 		"lint": "eslint .",
 		"preview": "vite preview"
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.0.0",
+		"@vercel/analytics": "^1.4.1",
 		"concurrently": "^8.2.2",
 		"cors": "^2.8.5",
 		"dotenv": "^16.4.7",
