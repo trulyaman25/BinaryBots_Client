@@ -1,0 +1,40 @@
+{
+    "aman": {
+        "email": "trulyaman25@gmail.com",
+        "image": "/teamMembers/amanImg.jpg",
+        "name": "aman kumar",
+        "description": "Building digital experiences with Blockchain, AI, and Full-Stack Development.",
+        "techStack": [
+            "Sql", "Full-Stack Web Developer", "Blockchain", "Smart Contracts", 
+            "Solidity", "C++", "Java", "JavaScript", "ReactJS", "Github", 
+            "Ipfs", "Node.js", "Express.js", "MongoDB", "Rest Api's", 
+            "Docker", "Firebase"
+        ],
+        "projects": [
+            {
+                "title": "Check Mate",
+                "organization": "Binary Bots",
+                "description": "CheckMate automates document verification with AI and blockchain, storing verified files on IPFS and providing tamper-proof access, fast verification, and a secure document wallet.",
+                "likes": 25,
+                "icon": "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fb6d5c300e40c4b46a7252ebc2e2ffa1e%2Fprojects%2Ff5dfd630bf984675b19a5d55f6d29e9c%2F6062ecbd-26a7-4d4e-b183-311e4850a832.jpeg&w=1440&q=75",
+                "projectLink": "https://devfolio.co/projects/check-mate-d1ea"
+            },
+            {
+                "title": "Well Wise",
+                "organization": "Binary Bots",
+                "description": "Well Wise is a healthcare platform that emphasizes mental health detection and management through AI-driven tools. it aims to tackle the challenge of diagnosing and managing depression.",
+                "likes": 0,
+                "icon": "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fdd6fb6207c72492cba2fa39d56197b71%2Fprojects%2Ff5dfd630bf984675b19a5d55f6d29e9c%2Fa444e1c0-cac9-4b6f-a7e2-ce584b5bc3cf.jpeg&w=1440&q=75",
+                "projectLink": "https://devfolio.co/projects/well-wise-50a2"
+            },
+            {
+                "title": "Key Vault",
+                "organization": "Aman, Ansh",
+                "description": "KeyVault is a secure password manager built with ReactJS, Tailwind, MongoDB, Express, and Node.js. It enables biometric authentication such as (fingerprint, Face ID) and stores data in encrypted form.",
+                "likes": 0,
+                "icon": "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fprojects%2Fcc472c87f93146df8d80414f355fb46e%2F9df516fc-b36b-42eb-8fde-a69545890aef.jpeg&w=1440&q=75",
+                "projectLink": "https://devfolio.co/projects/keyvault-825c"
+            }
+        ]
+    }
+}
