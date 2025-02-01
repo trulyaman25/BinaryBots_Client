@@ -1,8 +1,8 @@
 {
     "aman": {
+        "name": "aman kumar",
         "email": "trulyaman25@gmail.com",
         "image": "/teamMembers/amanImg.jpg",
-        "name": "aman kumar",
         "description": "Building digital experiences with Blockchain, AI, and Full-Stack Development.",
         "techStack": [
             "Sql", "Full-Stack Web Developer", "Blockchain", "Smart Contracts", 

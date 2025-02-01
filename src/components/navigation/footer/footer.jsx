@@ -2,9 +2,10 @@ import { Linkedin, Instagram, Github, Timer } from 'lucide-react';
 import memberData from '../../../data/memberData.json';
 import CodeIcon from '/icons/code.png';
 import BrandIcon from '/icons/brand.png';
+import { useState } from 'react';
 
 function Footer() {
-    const { email, image, name, description, techStack, projects, socials } = memberData.aman;
+    const { socials } = memberData.aman;
     const { linkedin, github, instagram } = socials[0];
 
     const services = [
@@ -24,6 +25,56 @@ function Footer() {
 			description: "We ensure high-quality, timely project completion with efficient workflows and agile methodologies."
 		}
 	];
+
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        countryCode: '+91',
+        phone: '',
+        company: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch('http://localhost:5000/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const data = await response.json();
+            
+            if (data.success) {
+                alert('Message sent successfully!');
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    countryCode: '+91',
+                    phone: '',
+                    company: '',
+                    message: ''
+                });
+            } else {
+                alert('Failed to send message.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Failed to send message.');
+        }
+    };
 
     return (
         <>
@@ -58,25 +109,26 @@ function Footer() {
                             <div className='w-full lg:w-1/2'>
                                 <div className='py-8 px-4 transition-all duration-300'>
                                     <h2 className='font-FreeZoneBold text-3xl sm:text-4xl text-center lg:text-start mb-6 bg-gradient-to-r from-[#1d1d1d] via-[#383837] to-[#5E5D5D] bg-clip-text text-transparent'>Contact Us</h2>
-                                    <form className='flex flex-col gap-4'>
+                                    <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
                                         <div className='flex flex-row gap-4'>
-                                            <input type="text" placeholder="First Name" required className='flex w-[50%] p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300' />
-                                            <input type="text" placeholder="Last Name" required className='flex w-[50%] p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300' />
+                                            <input type="text" name="firstName"value={formData.firstName}onChange={handleChange}placeholder="First Name" required className='flex w-[50%] p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300'/>
+                                            <input type="text" name="lastName"value={formData.lastName}onChange={handleChange}placeholder="Last Name" required className='flex w-[50%] p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300'/>
                                         </div>
                                         
-                                        <input type="email" placeholder="Email Address" required className='flex-1 p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300' />
+                                        <input type="email" name="email"value={formData.email}onChange={handleChange}placeholder="Email Address" required className='flex-1 p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300' />
                                         
                                         <div className='flex gap-4'>
-                                            <select name="countryCode" className="appearance-none text-center border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300 bg-white w-[100px]" >
+                                            <select name="countryCode" value={formData.countryCode}onChange={handleChange}className="appearance-none text-center border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300 bg-white w-[100px]"  >
                                                 <option value="+91">+91</option>
                                                 <option value="+1">+1</option>
                                             </select>
-                                            <input type="tel" placeholder="Phone Number" required className='flex-1 p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300' />
+                                            <input type="tel" name="phone"value={formData.phone}onChange={handleChange}placeholder="Phone Number" required className='flex-1 p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300'  />
                                         </div>
 
-                                        <input type="text" placeholder="Company (Optional)" className='p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300' />
+                                        <input type="text" name="company"value={formData.company}onChange={handleChange}placeholder="Company (Optional)" className='p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300' />
                                         
-                                        <textarea placeholder="Tell me about your project" required rows={10} className='p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300 resize-none' />
+                                        <textarea name="message"value={formData.message}onChange={handleChange}placeholder="Tell me about your project" required rows={10} 
+                                            className='p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300 resize-none' />
                                         
                                         <button type="submit"className='bg-[#FED685] text-[#131313] font-NoirProRegular text-xs px-10 py-4 hover:cursor-pointer hover:bg-yellow-400 transition-all duration-300 ease-in-out' >
                                             SEND MESSAGE

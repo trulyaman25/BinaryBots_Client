@@ -9,7 +9,7 @@ function MemberPage() {
 
     const [likedProjects, setLikedProjects] = useState(new Set());
     
-    const { email, image, name, description, techStack, projects, socials } = memberData.aman;
+    const { email, image, name, description, techStack, projects, socials } = memberData[memberID];
     const { linkedin, github, instagram } = socials[0];
 
     const handleLike = (projectTitle) => {
