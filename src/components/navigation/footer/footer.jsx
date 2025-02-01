@@ -62,13 +62,13 @@ function Footer() {
                                         
                                         <input type="email" placeholder="Email Address" required className='flex-1 p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300' />
                                         
-                                        {/* <div className='flex gap-4'>
-                                            <select name="countryCode" className="p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300 bg-white w-[100px]" >
+                                        <div className='flex gap-4'>
+                                            <select name="countryCode" className="appearance-none text-center border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300 bg-white w-[100px]" >
                                                 <option value="+91">+91</option>
                                                 <option value="+1">+1</option>
                                             </select>
                                             <input type="tel" placeholder="Phone Number" required className='flex-1 p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300' />
-                                        </div> */}
+                                        </div>
 
                                         <input type="text" placeholder="Company (Optional)" className='p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300' />
                                         
