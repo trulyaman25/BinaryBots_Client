@@ -27,15 +27,15 @@ function Footer() {
                 <div id='footer' className="w-full flex flex-col justify-between rounded-t-[70px] lg:rounded-t-[120px] bg-[#fcfcfc] pt-10 sm:pt-20 pr-4 sm:pr-20 pl-4 sm:pl-20 pb-10">
                     <div className='rounded-t-[70px] lg:rounded-t-[120px] flex flex-col justify-center items-center gap-10'>
                         <div className='flex flex-col justify-center items-center gap-3'>
-                            <h1 className='font-FreeZoneBold text-3xl sm:text-5xl text-center px-4 bg-gradient-to-r from-[#1d1d1d] via-[#383837] to-[#5E5D5D] bg-clip-text text-transparent'>Let's Build Something Amazing Together</h1>
-                            <p className='font-FreeZoneRegular text-lg sm:text-xl text-gray-600 max-w-[600px] text-center px-4'>Transform your business ideas into reality with custom web solutions</p>
+                            <h1 className='font-FreeZoneBold text-4xl sm:text-5xl text-center px-4 bg-gradient-to-r from-[#1d1d1d] via-[#383837] to-[#5E5D5D] bg-clip-text text-transparent'>Let's Build Something Amazing Together</h1>
+                            <p className='font-FreeZoneRegular text-xl sm:text-2xl text-gray-600 max-w-[600px] text-center px-4'>Transform your business ideas into reality with custom web solutions</p>
                         </div>
 
                         <span className='w-[70%] h-[1px] bg-gray-300'></span>
 
-                        <div className='w-full flex flex-col lg:flex-row justify-between items-start gap-10 lg:px-24'>
+                        <div className='w-full flex flex-col lg:flex-row justify-between items-start gap-10 xl:px-12 2xl:px-24'>
                             <div className='w-full py-8 px-4 lg:w-1/2 flex flex-col gap-6'>
-                                <h2 className='font-FreeZoneBold text-center text-2xl sm:text-3xl bg-gradient-to-r from-[#1d1d1d] via-[#383837] to-[#5E5D5D] bg-clip-text text-transparent'>Services We Offer</h2>
+                                <h2 className='font-FreeZoneBold text-center lg:text-start text-3xl sm:text-4xl bg-gradient-to-r from-[#1d1d1d] via-[#383837] to-[#5E5D5D] bg-clip-text text-transparent'>Services We Offer</h2>
                                 <div className='flex flex-col gap-4'>
                                     {services.map((service, index) => (
                                         <div key={index} className='bg-white p-6 rounded-2xl border-1 border-transparent transition-all duration-300'>
@@ -53,11 +53,11 @@ function Footer() {
 
                             <div className='w-full lg:w-1/2'>
                                 <div className='py-8 px-4 transition-all duration-300'>
-                                    <h2 className='font-FreeZoneBold text-2xl sm:text-3xl mb-6 bg-gradient-to-r from-[#1d1d1d] via-[#383837] to-[#5E5D5D] bg-clip-text text-transparent'>Contact Us</h2>
+                                    <h2 className='font-FreeZoneBold text-3xl sm:text-4xl text-center lg:text-start mb-6 bg-gradient-to-r from-[#1d1d1d] via-[#383837] to-[#5E5D5D] bg-clip-text text-transparent'>Contact Us</h2>
                                     <form className='flex flex-col gap-4'>
-                                        <div className='flex flex-col sm:flex-row gap-4'>
-                                            <input type="text" placeholder="First Name" required className='flex-1 p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300' />
-                                            <input type="text" placeholder="Last Name" required className='flex-1 p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300' />
+                                        <div className='flex flex-row gap-4'>
+                                            <input type="text" placeholder="First Name" required className='flex w-[50%] p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300' />
+                                            <input type="text" placeholder="Last Name" required className='flex w-[50%] p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300' />
                                         </div>
                                         
                                         <input type="email" placeholder="Email Address" required className='flex-1 p-4 border-2 border-[#eeedec] font-albulaRegular focus:outline-none focus:ring-2 focus:ring-gray-300' />
