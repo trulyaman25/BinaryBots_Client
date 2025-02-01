@@ -97,7 +97,7 @@ function MemberPage() {
 					<div id='devFolioCards'>
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 mt-10">
 							{projects.map((project, index) => (
-								<div key={index} className="bg-white rounded-2xl p-7 xs:p-10 max-w-[500px] border border-transparent hover:border-gray-400 transition-none">
+								<div key={index} className="bg-white rounded-2xl p-7 xs:p-10 max-w-[500px] transition-none">
 									<div className="flex justify-between items-start">
 										<div className="flex gap-4">
 											<img src={project.icon} alt={`${project.title} icon`} className="w-16 h-16 rounded-lg object-cover" />
@@ -107,11 +107,7 @@ function MemberPage() {
 											</div>
 										</div>
 										
-										{/* Like Button */}
-										<div 
-											onClick={() => handleLike(project.title)} 
-											className="flex flex-col w-[60px] h-[60px] justify-center items-center gap-2 bg-white rounded-md shadow-sm border hover:shadow-md hover:cursor-pointer border-gray-100"
-										>
+										<div onClick={() => handleLike(project.title)} className="flex flex-col w-[60px] h-[60px] justify-center items-center gap-2 bg-white rounded-md shadow-sm border hover:shadow-md hover:cursor-pointer border-gray-100" >
 											<Heart className={`w-4 h-4 ${likedProjects.has(project.title) ? 'text-red-500 fill-red-500' : 'text-gray-600'}`} />
 											<span className="text-sm font-albulaHeavy text-gray-900">
 												{project.likes + (likedProjects.has(project.title) ? 1 : 0)}

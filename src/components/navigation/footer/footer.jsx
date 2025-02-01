@@ -16,7 +16,7 @@ function Footer() {
 		},
 		{
 			title: "Quick Delivery",
-			icon: <Timer className="w-6 h-6" />,
+			icon: <Timer className="w-6 h-6 invert" />,
 			description: "We ensure high-quality, timely project completion with efficient workflows and agile methodologies."
 		}
 	];

@@ -3,6 +3,20 @@
         "email": "trulyaman25@gmail.com",
         "image": "/teamMembers/amanImg.jpg",
         "name": "aman kumar",
+        "socials": [
+            {
+                "linkedin": "https://www.linkedin.com/in/amankumar25/",
+                "github": "https://github.com/trulyaman25",
+                "instagram": "https://www.instagram.com/amanwhoooo/"
+            }
+        ],
+        "codingProfiles": [
+            {
+                "leetcode": "https://leetcode.com/u/trulyaman25/",
+                "codechef": "https://www.codechef.com/users/amankumar25/",
+                "hackerrank": "https://www.hackerrank.com/profile/amankumar25"
+            }
+        ],
         "description": "Building digital experiences with Blockchain, AI, and Full-Stack Development.",
         "techStack": [
             "Sql", "Full-Stack Web Developer", "Blockchain", "Smart Contracts", 
