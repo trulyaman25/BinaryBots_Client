@@ -9,7 +9,8 @@ function MemberPage() {
 
     const [likedProjects, setLikedProjects] = useState(new Set());
     
-    const { email, image, name, description, techStack, projects } = memberData.aman;
+    const { email, image, name, description, techStack, projects, socials } = memberData.aman;
+    const { linkedin, github, instagram } = socials[0];
 
     const handleLike = (projectTitle) => {
         setLikedProjects(prev => {
@@ -42,23 +43,23 @@ function MemberPage() {
 							</div>
 
 							<div className='flex flex-row justify-between items-center gap-2 xs:gap-3 md:hidden'>	 
-								<a href="" className='bg-[#fcfcfc] p-2 rounded-full capitalize'>
+								<a href={linkedin} target="_blank" rel="noopener noreferrer" className='bg-[#fcfcfc] p-2 rounded-full capitalize'>
 									<Linkedin className='w-[20px] h-[20px] m-1'/>
 								</a>
-								<a href="" className='bg-[#fcfcfc] p-2 rounded-full capitalize'>
+								<a href={github} target="_blank" rel="noopener noreferrer" className='bg-[#fcfcfc] p-2 rounded-full capitalize'>
 									<Github className='w-[20px] h-[20px] m-1'/>
 								</a>
-								<a href="" className='bg-[#fcfcfc] p-2 rounded-full capitalize'>
+								<a href={instagram} target="_blank" rel="noopener noreferrer" className='bg-[#fcfcfc] p-2 rounded-full capitalize'>
 									<Instagram className='w-[20px] h-[20px] m-1'/>
 								</a>
 							</div>
 
 							<div className='flex-row justify-between items-center gap-2 hidden md:flex'>	 
-								<a href="" className='text-base text-gray-700 font-FreeZoneMedium capitalize hover:text-gray-600 transition-all duration-300 ease-in-out'>linkedin</a>
+								<a href={linkedin} target="_blank" rel="noopener noreferrer" className='text-base text-gray-700 font-FreeZoneMedium capitalize hover:text-gray-600 transition-all duration-300 ease-in-out'>linkedin</a>
 								<span className='text-slate-400'>/</span>
-								<a href="" className='text-base text-gray-700 font-FreeZoneMedium capitalize hover:text-gray-600 transition-all duration-300 ease-in-out'>github</a>
+								<a href={github} target="_blank" rel="noopener noreferrer" className='text-base text-gray-700 font-FreeZoneMedium capitalize hover:text-gray-600 transition-all duration-300 ease-in-out'>github</a>
 								<span className='text-slate-400'>/</span>
-								<a href="" className='text-base text-gray-700 font-FreeZoneMedium capitalize hover:text-gray-600 transition-all duration-300 ease-in-out'>instagram</a>
+								<a href={instagram} target="_blank" rel="noopener noreferrer" className='text-base text-gray-700 font-FreeZoneMedium capitalize hover:text-gray-600 transition-all duration-300 ease-in-out'>instagram</a>
 							</div>
 						</div>
 

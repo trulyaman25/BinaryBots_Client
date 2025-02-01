@@ -3,6 +3,13 @@
         "email": "trulyaman25@gmail.com",
         "image": "/teamMembers/amanImg.jpg",
         "name": "aman kumar",
+        "description": "Building digital experiences with Blockchain, AI, and Full-Stack Development.",
+        "techStack": [
+            "Sql", "Full-Stack Web Developer", "Blockchain", "Smart Contracts", 
+            "Solidity", "C++", "Java", "JavaScript", "ReactJS", "Github", 
+            "Ipfs", "Node.js", "Express.js", "MongoDB", "Rest Api's", 
+            "Docker", "Firebase"
+        ],
         "socials": [
             {
                 "linkedin": "https://www.linkedin.com/in/amankumar25/",
@@ -16,13 +23,6 @@
                 "codechef": "https://www.codechef.com/users/amankumar25/",
                 "hackerrank": "https://www.hackerrank.com/profile/amankumar25"
             }
-        ],
-        "description": "Building digital experiences with Blockchain, AI, and Full-Stack Development.",
-        "techStack": [
-            "Sql", "Full-Stack Web Developer", "Blockchain", "Smart Contracts", 
-            "Solidity", "C++", "Java", "JavaScript", "ReactJS", "Github", 
-            "Ipfs", "Node.js", "Express.js", "MongoDB", "Rest Api's", 
-            "Docker", "Firebase"
         ],
         "projects": [
             {

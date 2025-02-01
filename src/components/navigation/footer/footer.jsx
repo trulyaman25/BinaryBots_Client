@@ -1,8 +1,12 @@
 import { Linkedin, Instagram, Github, Timer } from 'lucide-react';
+import memberData from '../../../data/memberData.json';
 import CodeIcon from '/icons/code.png';
 import BrandIcon from '/icons/brand.png';
 
 function Footer() {
+    const { email, image, name, description, techStack, projects, socials } = memberData.aman;
+    const { linkedin, github, instagram } = socials[0];
+
     const services = [
 		{
 			title: "Web Development",
@@ -87,13 +91,13 @@ function Footer() {
                         <div className='w-[90%] sm:w-[100%] lg:w-[90%] flex flex-col-reverse sm:flex-row justify-between items-center gap-10'>
                             <h1 className='text-gray-500 font-albulaLight text-center'>&copy; 2025 Binary Bots. All rights reserved</h1>
                             <div className='flex flex-row justify-between items-center gap-2 xs:gap-3'>	 
-                                <a href="" className='bg-[#131313] p-2 rounded-full capitalize'>
+                                <a href={linkedin} className='bg-[#131313] p-2 rounded-full capitalize'>
                                     <Linkedin className='w-[20px] h-[20px] m-1 invert'/>
                                 </a>
-                                <a href="" className='bg-[#131313] p-2 rounded-full capitalize'>
+                                <a href={github} className='bg-[#131313] p-2 rounded-full capitalize'>
                                     <Github className='w-[20px] h-[20px] m-1 invert'/>
                                 </a>
-                                <a href="" className='bg-[#131313] p-2 rounded-full capitalize'>
+                                <a href={instagram} className='bg-[#131313] p-2 rounded-full capitalize'>
                                     <Instagram className='w-[20px] h-[20px] m-1 invert'/>
                                 </a>
                             </div>
