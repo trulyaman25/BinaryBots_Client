@@ -1,8 +1,9 @@
-import React, { useState } from 'react';  // Add useState import
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { User, Mail, Linkedin, Instagram, Github, ArrowRight, MonitorSmartphone, PenTool, Code, HandshakeIcon, Heart } from 'lucide-react';
+import { User, Mail, Linkedin, Instagram, Github, ArrowRight, MonitorSmartphone, PenTool, Code, HandshakeIcon, Heart, MessageSquare, Building2, Timer } from 'lucide-react';
 import amanPicture from '/teamMembers/amanImg.jpg';
 import TechStackTicker from '../components/TechStackTicker';
+
 
 function MemberPage() {
     const [likedProjects, setLikedProjects] = useState(new Set());
@@ -29,6 +30,14 @@ function MemberPage() {
 
 	const projects = [
 		{
+			title: "Check Mate",
+			organization: "Binary Bots",
+			description: "CheckMate automates document verification with AI and blockchain, storing verified files on IPFS and providing tamper-proof access, fast verification, and a secure document wallet.",
+			likes: 25,
+			icon: "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fb6d5c300e40c4b46a7252ebc2e2ffa1e%2Fprojects%2Ff5dfd630bf984675b19a5d55f6d29e9c%2F6062ecbd-26a7-4d4e-b183-311e4850a832.jpeg&w=1440&q=75",
+			projectLink: "https://devfolio.co/projects/check-mate-d1ea",
+		},
+		{
 		  title: "Well Wise",
 		  organization: "Binary Bots",
 		  description: "Well Wise is a healthcare platform that emphasizes mental health detection and management through AI-driven tools. it aims to tackle the challenge of diagnosing and managing depression.",
@@ -37,12 +46,12 @@ function MemberPage() {
 		  projectLink: "https://devfolio.co/projects/well-wise-50a2",
 		},
 		{
-			title: "Check Mate",
-			organization: "Binary Bots",
-			description: "CheckMate automates document verification with AI and blockchain, storing verified files on IPFS and providing tamper-proof access, fast verification, and a secure document wallet.",
-			likes: 25,
-			icon: "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2Fb6d5c300e40c4b46a7252ebc2e2ffa1e%2Fprojects%2Ff5dfd630bf984675b19a5d55f6d29e9c%2F6062ecbd-26a7-4d4e-b183-311e4850a832.jpeg&w=1440&q=75",
-			projectLink: "https://devfolio.co/projects/check-mate-d1ea",
+			title: "Key Vault",
+			organization: "Aman, Ansh",
+			description: "KeyVault is a secure password manager built with ReactJS, Tailwind, MongoDB, Express, and Node.js. It enables biometric authentication such as (fingerprint, Face ID) and stores data in encrypted form.",
+			likes: 0,
+			icon: "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fprojects%2Fcc472c87f93146df8d80414f355fb46e%2F9df516fc-b36b-42eb-8fde-a69545890aef.jpeg&w=1440&q=75",
+			projectLink: "https://devfolio.co/projects/keyvault-825c",
 		}
 	]
 
@@ -154,7 +163,7 @@ function MemberPage() {
 									<p className="text-gray-600 mt-6 mb-6 font-albulaRegular line-clamp-3 text-sm sm:text-md">{project.description}</p>
 
 									<div>
-										<a href={project.projectLink} className='px-6 sm:px-7 py-3 border-1 text-sm font-albulaRegular border-gray-100 hover:border-1 hover:border-gray-500 rounded-md hover:cursor-pointer'>Learn More...</a>
+										<a href={project.projectLink} className='px-6 sm:px-7 py-3 border-1 text-sm font-albulaRegular border-gray-300 hover:border-1 hover:border-gray-500 rounded-md hover:cursor-pointer'>Learn More...</a>
 									</div>
 								</div>
 							))}

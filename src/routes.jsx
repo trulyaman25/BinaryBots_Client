@@ -11,7 +11,7 @@ function RoutesApp() {
 		<Router>
 			{/* <Header /> */}
 			<MainRoutes />
-			{/* <Footer /> */}
+			<Footer />
 		</Router>
 	);
 }
