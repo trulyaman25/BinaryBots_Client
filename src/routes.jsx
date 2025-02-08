@@ -7,25 +7,29 @@ import MemberPage from "./section/memberPage";
 import Contact from "./section/contact";
 import Footer from "./components/navigation/footer/footer";
 
-function RoutesApp() {
+function HomeRoutes() {
 	return (
 		<Router>
-			{/* <Header /> */}
 			<MainRoutes />
 			<Analytics />
-			<Footer />
 		</Router>
 	);
 }
 
 function MainRoutes() {
+	const location = useLocation();
+
 	return (
-		<Routes>
-			<Route path="/" element={<Home />} />
-			<Route path="/member/:memberID" element={<MemberPage />} />
-			<Route path="/contact" element={<Contact />} />
-		</Routes>
+		<>
+			{location.pathname === "/" && <Header /> }
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/member/:memberID" element={<MemberPage />} />
+				<Route path="/contact" element={<Contact />} />
+			</Routes>
+			<Footer />
+		</>
 	);
 }
 
-export default RoutesApp;
+export default HomeRoutes;
