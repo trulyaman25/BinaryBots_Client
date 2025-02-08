@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 import Header from "./components/navigation/header/header";
 import Home from "./section/home";
@@ -11,7 +12,16 @@ function HomeRoutes() {
 	return (
 		<Router>
 			<MainRoutes />
+			<AnalyticsRoutes />
+		</Router>
+	);
+}
+
+function AnalyticsRoutes() {
+	return (
+		<Router>
 			<Analytics />
+			<SpeedInsights />
 		</Router>
 	);
 }
