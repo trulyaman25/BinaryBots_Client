@@ -19,10 +19,10 @@ function HomeRoutes() {
 
 function AnalyticsRoutes() {
 	return (
-		<Router>
+		<>
 			<Analytics />
 			<SpeedInsights />
-		</Router>
+		</>
 	);
 }
 
